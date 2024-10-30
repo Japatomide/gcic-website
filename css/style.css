@@ -1,0 +1,352 @@
+/* General styling/Default styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: sans-serif; */
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+a:hover {
+  color: rgb(114, 179, 179);
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+  transition: all 0.3s ease;
+
+}
+
+li {
+  list-style: none;
+}
+
+/* #gcic-logo {
+  width: 60px;
+  height: 60px;
+} */
+
+#navbar,
+#nav-menu {
+  display: flex;
+}
+
+#navbar {
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 4rem;
+}
+
+#nav-menu {
+  gap: 3rem;
+}
+
+/* Styling for the dropdown menu on the navbar */
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: transparent;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content li {
+  float: none;
+}
+
+.dropdown-content li a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  color: white;
+}
+
+.dropdown-content li a:hover {
+  background-color: rgb(172, 226, 226);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Highlight the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Hero section */
+#hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../imgs/hero-section-img.JPG");
+  background-size: cover;
+  background-position: center;
+  height: 87vh;
+  padding: 0 20px;
+  /* margin-bottom: 4rem; */
+}
+
+/* Card Section */
+#card-section {
+  background-color: #9e8fb2;
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.container {
+  position: relative;
+  width: 1100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+  padding: 30px;
+}
+
+.container .card {
+  position: relative;
+  max-width: 300px;
+  height: 215px;
+  /* background-color: #fff; */
+  margin: 30px 10px;
+  padding: 20px 15px;
+  background-color: #df2935;
+
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+  border-radius: 15px;
+}
+.container .card:hover {
+  height: 320px;
+}
+
+.container .card .image {
+  background-color: rgb(114, 179, 179);
+  color: #ddd;
+  position: relative;
+  width: 260px;
+  height: 260px;
+  top: -40%;
+  left: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.container .card .image img {
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+.container .card .content {
+  position: relative;
+  top: -140px;
+  padding: 10px 15px;
+  color: #111;
+  text-align: center;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.container .card:hover .content {
+  margin-top: 30px;
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0.2s;
+}
+
+/* Connect Online */
+.icon {
+  width: 2rem;
+  margin-left: 5.4rem;
+}
+
+#resources-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8rem;
+}
+
+#resources-text {
+  margin-bottom: 1.5rem;
+}
+
+#resources-text h5 {
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgb(114, 179, 179);
+}
+
+#resources-text h1 {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+#resources-items {
+  display: flex;
+  gap: 5rem;
+}
+
+#resources-items h1 {
+  text-align: center;
+}
+
+#resources-items p {
+  color: rgb(202, 191, 191);
+  font-weight: normal;
+  font-style: italic;
+}
+
+#resources-items h1 {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: rgb(114, 179, 179);
+}
+
+/* About Pastor Matthew Section */
+#about-pastor-section {
+  display: flex;
+  height: 100vh;
+  margin-bottom: 4rem;
+}
+
+#pastor-img-container {
+  flex: 1;
+  overflow: hidden;
+}
+
+#pastor-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#pastor-writeup-container {
+  background-color: rgb(251, 251, 251);
+  flex: 1;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  align-items: center;
+  padding-inline: 1.5rem;
+  line-height: 1.5em;
+  padding-top: 3rem;
+}
+
+#pastor-writeup-container h1 {
+  font-weight: bolder;
+  font-size: 2.3rem;
+}
+
+#pastor-writeup-container p {
+  color: rgb(145, 142, 142);
+}
+
+#pastor-writeup-container h5 {
+  color: rgb(114, 179, 179);
+}
+
+/* Footer Section */
+.socials {
+  width: 2rem;
+}
+
+#footer-section {
+  display: flex;
+  flex-direction: column;
+  padding: 6rem;
+  background-color: rgb(114, 179, 179);
+}
+
+#footer-section #normal-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+}
+
+#logo-writeup-container img {
+  padding: 10px;
+}
+
+#socials-container h1 {
+  padding-bottom: 10px;
+}
+
+#socials-container ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+#newsletter-container h1 {
+  padding-bottom: 10px;
+}
+
+#newsletter-container p {
+  padding-bottom: 10px;
+}
+
+#newsletter-container form input[type="text"] {
+  background-color: rgb(255, 159, 28);
+  padding: 12px 20px;
+  margin: 8px 0;
+  width: 100%;
+}
+
+#newsletter-container form input[type="text"]:focus {
+  /* border: 1px solid rgb(255, 159, 28); */
+  border: none;
+}
+
+#newsletter-container form input[type="submit"] {
+  padding: 12px 20px;
+  background-color: rgb(255, 159, 28);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  width: 50%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+#newsletter-container form input[type="submit"]:hover {
+  cursor: pointer;
+  box-shadow: none;
+}
+
+#copyright-section {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: flex-start;
+}
+
+#copyright-section div div h1 {
+  text-align: center;
+}

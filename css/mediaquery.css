@@ -1,0 +1,56 @@
+@media screen and (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  #nav-menu {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #nav-menu li {
+    width: 100%;
+  }
+
+  .dropdown-content {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+}
+
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+  #gcic-logo {
+    height: 50px;
+  }
+
+  #nav-menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0;
+  }
+
+  /* Toggle button for menu */
+  #menu-toggle {
+    display: block;
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+  #navbar.show-menu #nav-menu {
+    display: flex;
+  }
+
+  #about-pastor-section {
+    display: flex;
+    flex-direction: column;
+  }
+}
